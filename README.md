@@ -7,6 +7,7 @@ Scheduling: Processes are scheduled by process algorithms.
 Metrics: Calculates average turnaround time, waiting time, CPU utilization, and I/O utilization.
 
 **Usage**
+
 Compile the program:
           g++ -o fcfs FCFS-schedular.cpp
           
