@@ -32,7 +32,12 @@ int main()
     }
 
     sort(p.begin(), p.end(), [](Process a, Process b)
-         { return a.arrival_time < b.arrival_time; });
+{
+    if (a.arrival_time == b.arrival_time)
+        return a.pid < b.pid;  // Break ties using PID (or you can use burst time for SJF)
+    return a.arrival_time < b.arrival_time;
+});
+
 
     int current_time = 0;
     int total_burst = 0;
